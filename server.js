@@ -17,7 +17,7 @@ app.get('/gr/:name', function(req, res) {
   res.send(rnGreeting() + " " + req.params.name)
 })
 
-app.listen(8080, function(){
+app.listen(process.env.PORT || 8080, function(){
     console.log("The server started on port 8080");
 })
 
